@@ -5,7 +5,7 @@ export const PizzaContext = createContext();
 const PizzaProvider = ({ children }) => {
   const [pizzaData, setPizzaData] = useState();
 
-  const getData = () => {
+  const putData = () => {
     fetch("data.json", {
       headers: {
         "Content-Type": "application/json",
@@ -18,16 +18,22 @@ const PizzaProvider = ({ children }) => {
       })
       .then(function (myJson) {
         console.log(myJson);
-        setPizzaData(myJson);
+        const data = localStorage.setItem("products", JSON.stringify(myJson));
+        setPizzaData(data);
       });
   };
 
+  const getData = () => {
+    const pizzaData = JSON.parse(localStorage.getItem("products"));
+    return pizzaData;
+  };
+
   useEffect(() => {
-    getData();
+    putData();
   }, []);
 
   return (
-    <PizzaContext.Provider value={{ pizzaData }}>
+    <PizzaContext.Provider value={{ pizzaData, getData }}>
       {children}
     </PizzaContext.Provider>
   );

@@ -4,8 +4,8 @@ import { useContext } from "react";
 import PizzaContext from "../context/PizzaProvider";
 
 const Product = () => {
-  const { pizzaData } = useContext(PizzaContext);
-
+  const { getData } = useContext(PizzaContext);
+  const pizzaData = getData();
   return (
     <div>
       <h2 className="pizza-h2">Produit</h2>
