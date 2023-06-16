@@ -11,7 +11,7 @@ const Product = () => {
       <h2 className="pizza-h2">Produit</h2>
       {/*boucle map sur la state des produits qui va afficher le composant article detail (on passe les infos du produit en tant que props pour les recup dans le composant enfant*/}
       {
-        <ul>
+        <ul className="pizza-produit">
           {pizzaData.map((item) => {
             return <ArticleDetail key={item.id} produit={item} />;
           })}

@@ -1,22 +1,27 @@
-import { useState, useEffect } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import UserContext from "../context/UserProvider";
 
-const Logout = (props) => {
-  /*const [redirect, setRedirect] = useState(false);
+const Logout = () => {
+  const { setLogged } = useContext(UserContext);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    window.localStorage.removeItem("pizzaforever-token");
-    logoutUser();
-    setRedirect(true);
-  }, []);
+  const disconnect = () => {
+    setLogged(false);
+    navigate("/");
+  };
 
-  if (redirect) {
-    return <Navigate to="/" />;
-  }
-*/
   return (
     <div>
-      <h1>Logout</h1>
+      <h1>Merci pour votre Visite</h1>
+      <button
+        className="logout"
+        type="button"
+        onClick={(e) => {
+          e.preventDefault();
+          disconnect();
+        }}
+      ></button>
     </div>
   );
 };

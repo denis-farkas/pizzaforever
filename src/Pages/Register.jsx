@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs-react";
+import { useContext } from "react";
+import UserContext from "../context/UserProvider";
 
 const Register = () => {
-  const [error, setError] = useState(null);
-  const [redirect, setRedirect] = useState(false);
+  const { registerUser } = useContext(UserContext);
+
   //création des states du formulaire
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -14,6 +16,8 @@ const Register = () => {
   const [zip, setZip] = useState("");
   const [city, setCity] = useState("");
   const [phone, setPhone] = useState("");
+
+  const navigate = useNavigate();
 
   // on envoie le formulaire
   function onSubmitForm() {
@@ -36,15 +40,9 @@ const Register = () => {
       phone: phone,
     };
 
-    if (localStorage.getItem("userData")) {
-      setRedirect(true);
-    } else {
-      return <Navigate to="/register" />;
-    }
-  }
+    registerUser(userData);
 
-  if (redirect) {
-    return <Navigate to="/login" />;
+    navigate("/login");
   }
 
   return (

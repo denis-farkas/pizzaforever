@@ -215,6 +215,14 @@ img {
 }
 
 /* Menu */
+.pizza-produit {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .pizza-h2 {
   padding: 3rem;
   color: var(--white);
@@ -272,6 +280,8 @@ img {
   color: var(--pizza-yellow);
   font-size: 1.6em;
   margin-left: 5%;
+  background-color: #11ffee00;
+  border: none;
 }
 
 /* Popup */

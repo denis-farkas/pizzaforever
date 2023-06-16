@@ -5,7 +5,8 @@ import { useContext } from "react";
 import UserContext from "../context/UserProvider";
 
 const Header = () => {
-  const { userData } = useContext(UserContext);
+  const { logged, userData } = useContext(UserContext);
+  console.log(logged);
 
   return (
     <div className="header-nav">
@@ -19,7 +20,7 @@ const Header = () => {
         <div className="menu">
           <Link to="/">Accueil</Link>
           <Link to="/product">Produit</Link>
-          {userData && userData.isLogged ? (
+          {logged ? (
             <div>
               <Link to="/profil">{userData.firstname}</Link>
               <Link to="/logout">Déconnexion</Link>

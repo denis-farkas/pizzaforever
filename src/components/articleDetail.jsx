@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+
 //import Popup from "./popup";
 
 const ArticleDetail = ({ produit }) => {
@@ -59,7 +62,7 @@ const ArticleDetail = ({ produit }) => {
             e.preventDefault();
           }}
         >
-          <i className="fa fa-plus-circle"></i>
+          <FontAwesomeIcon icon={faPlusCircle} />
         </button>
       </form>
     </li>
