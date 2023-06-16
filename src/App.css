@@ -1,38 +1,862 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Nothing+You+Could+Do&display=swap");
+:root {
+  --poppins-font: "Poppins", sans-serif;
+  --josefin-font: "Sansita Swashed", cursive;
+  --nothing-font: "Nothing You Could Do", cursive;
+  --white: white;
+  --light-gray: #919191;
+  --whitish-gray: #bfbfbf;
+  --light-black: #121618;
+  --pizza-yellow: #ffe600;
+  --yellow: #fac564;
+  --pizza-red: #ff6240;
+}
+
+/* Global */
+html {
+  background-color: var(--light-black);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  background-image: url("./assets/logo/landing-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .App {
   text-align: center;
+  font-family: var(--poppins-font), Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Nav */
+.header-nav nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light-black);
+}
+.header-nav nav .menu {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  height: 3rem;
+  margin-top: 0;
+  position: relative;
+}
+.header-nav nav .menu a {
+  color: var(--white);
+  font-size: 18px;
+  padding: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Logo */
+.logo-style {
+  max-width: 3.7%;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+.logo-style p {
+  font-size: 1.5rem;
+  font-family: var(--josefin-font);
+  line-height: 2rem;
+  letter-spacing: 2px;
+  color: var(--white);
+}
+.logo-style p span {
+  display: block;
+  color: var(--pizza-yellow);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header Image */
+.header-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(assets/logo/header-pizza-one.jpg);
+  height: 23rem;
+  max-height: 100%;
+  width: 100%;
+  padding: 180px 0 80px 0;
+}
+.background_opacity {
+  opacity: 0.7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.header-info {
+  gap: 1.5rem;
+  padding: 2rem;
+  margin-top: -175px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--white);
+}
+.header-info span {
+  color: var(--pizza-red);
+  font-family: var(--nothing-font);
+  font-size: 2rem;
+}
+.header-info h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 3rem;
+  color: var(--white);
+}
+.header-info p {
+  width: 40%;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+.header-btn {
+  gap: 1.3rem;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: row;
+}
+.btn-link {
+  border: 1px solid;
+  padding: 1.2rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.btn-link:first-child {
+  color: var(--light-black);
+  background-color: var(--yellow);
+  border: 1px solid transparent;
+}
+
+/* Services */
+.services {
+  gap: 1rem;
+  background-image: url("./assets/logo/services.png");
+  background-repeat: repeat;
+  background-size: contain;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.services h2 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.services-flex {
+  gap: 4rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+}
+.services img {
+  padding: 1rem;
+  width: 3.5rem;
+  margin: 0 auto;
+  z-index: 2;
+  border: 1px solid #bf7e06;
+}
+.services h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 30px;
+}
+.service-list p {
+  font-size: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--white);
+  background-color: var(--light-black);
+  padding: 3rem 2rem;
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+}
+.footer-paiement {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 0 auto;
+}
+.footer-paiement img {
+  width: 2rem;
+  max-width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/* Menu */
+.pizza-h2 {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.pizza-section {
+  text-align: center;
+  width: 25%;
+  display: inline-block;
+  padding: 10px 1%;
+  vertical-align: top;
+  border: 2px solid #ffe600;
+  border-radius: 5%;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-top: 25px;
+}
+.pizza-section h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--white);
+  padding: 1rem;
+}
+.pizza-section img {
+  object-fit: cover;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  display: block;
+}
+.ingredient {
+  height: 50px;
+  color: var(--white);
+  padding: 1rem;
+}
+.price {
+  color: var(--yellow);
+  align-items: center;
+  font-size: 1.4rem;
+  height: 50px;
+  padding: 1rem;
+}
+.pizza-section form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pizza-section form input {
+  width: 25px;
+  height: 25px;
+}
+.pizza-section .addToBasket {
+  color: var(--pizza-yellow);
+  font-size: 1.6em;
+  margin-left: 5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Popup */
+.popUp {
+  border: 2px solid #ffe600;
+  border-radius: 20px;
+  position: fixed;
+  top: 100px;
+  left: 32%;
+  z-index: 15;
+  background-color: white;
+  text-align: center;
+  padding: 10px 20px;
+}
+.popUp img {
+  margin-top: 30px;
+  width: 100%;
+}
+.popUp .closePopUp {
+  width: 15%;
+  margin: 5px 20px 0 91%;
+  cursor: pointer;
+}
+#btn-vers-panier {
+  cursor: pointer;
+  width: 80%;
+  background-color: transparent;
+  margin-top: 10px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid #ffe600;
+}
+#vers-panier {
+  color: black;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Register */
+.register-main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--light-black);
+}
+.register-main h1 {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.register-main input {
+  border: 1px solid #ffe600;
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 10px;
+  display: inline-block;
+  width: 25%;
+  margin: 3rem;
+}
+.register-main input::placeholder {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.register-main input:focus-visible {
+  outline: 1px solid #ffe600;
+}
+.register-main input[type="text"] {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.register-main input[type="submit"] {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Login */
+.login-main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--light-black);
+}
+.login-main h1 {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.login-main input {
+  border: 1px solid #ffe600;
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 10px;
+  display: inline-block;
+  width: 25%;
+  margin: 3rem;
+}
+.login-main input::placeholder {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.login-main input:focus-visible {
+  outline: 1px solid #ffe600;
+}
+.login-main input[type="text"] {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.login-main input[type="submit"] {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Basket */
+.trash-pizza i {
+  color: #fac564;
+  font-size: 20px;
+}
+.basket {
+  background-color: var(--light-black);
+}
+.basket h2 {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.basketTable {
+  border: 2px solid #ffe600;
+  border-radius: 12px;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 30px;
+  width: 80%;
+}
+.basketTable th {
+  padding: 0 3%;
+  width: 19%;
+  height: 40px;
+  color: #fac564;
+  font-family: var(--nothing-font);
+}
+.basketTable td {
+  padding: 0 3%;
+  width: 19%;
+  height: 40px;
+  color: var(--white);
+}
+.basket .btn-payer {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid #ffe600;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 30px;
+}
+.basket h3 {
+  color: var(--white);
+}
+.basket p {
+  color: var(--white);
+  margin: 40px;
+}
+.basket .back-to-menu {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid #ffe600;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* Profil */
+.profil-main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--light-black);
+}
+.profil-main h2 {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.profil-main p {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.profil-main input {
+  border: 1px solid #ffe600;
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 10px;
+  display: inline-block;
+  width: 25%;
+  margin: 3rem;
+}
+.profil-main input::placeholder {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.profil-main input:focus-visible {
+  outline: 1px solid #ffe600;
+}
+.profil-main input[type="text"] {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.profil-main input[type="submit"] {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Admin */
+.admin-section h2 {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.addPizza {
+  padding: 1.5rem;
+  color: var(--yellow);
+  text-align: center;
+  font-size: 25px;
+}
+.table-pizza {
+  padding: 1.5rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.tablePizza {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  padding: 10px 1%;
+  vertical-align: top;
+  border: 2px solid #ffe600;
+  border-radius: 5%;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-top: 25px;
+}
+.tablePizza h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--white);
+  padding: 1rem;
+}
+.tablePizza img {
+  object-fit: cover;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  display: block;
+}
+.modifierPizza {
+  padding: 1rem;
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+}
+.supprimerPizza {
+  padding: 1rem;
+  color: var(--white);
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Edit Pizza */
+.edit-main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--light-black);
+}
+.edit-main h2 {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.edit-main p {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.edit-main input {
+  border: 1px solid #ffe600;
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 10px;
+  display: inline-block;
+  width: 25%;
+  margin: 3rem;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.edit-main textarea[type="text"] {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  width: 80%;
+  background-color: transparent;
+  border: 1px solid #ffe600;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.edit-main input[type="file"] {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.edit-main input::placeholder {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.edit-main textarea::placeholder {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.edit-main input:focus-visible {
+  outline: 1px solid #ffe600;
+}
+.edit-main textarea:focus-visible {
+  outline: 1px solid #ffe600;
+}
+.edit-main input[type="submit"] {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Add Pizza */
+.add-main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--light-black);
+}
+.add-main h2 {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.add-main p {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.add-main input {
+  border: 1px solid #ffe600;
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 10px;
+  display: inline-block;
+  width: 25%;
+  margin: 3rem;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.add-main textarea[type="text"] {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  width: 80%;
+  background-color: transparent;
+  border: 1px solid #ffe600;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.add-main input[type="file"] {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.add-main input::placeholder {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.add-main textarea::placeholder {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.add-main input:focus-visible {
+  outline: 1px solid #ffe600;
+}
+.add-main textarea:focus-visible {
+  outline: 1px solid #ffe600;
+}
+.add-main input[type="submit"] {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Paiement */
+.paiement-main {
+  background-color: var(--light-black);
+}
+.paiement-main h2 {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.paiement-information {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--light-black);
+}
+.paiement-information input {
+  border: 1px solid #ffe600;
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 10px;
+  display: inline-block;
+  width: 25%;
+  margin: 1.5rem;
+}
+.paiement-information input::placeholder {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.paiement-information input:focus-visible {
+  outline: 1px solid #ffe600;
+}
+.paiement-information input[type="text"] {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.paiement-information input[type="submit"] {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.paiement-section {
+  border: 1px solid #ffe600;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2.5rem;
+}
+.paiement-main button {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid #ffe600;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* Success */
+.success-main {
+  background-color: var(--light-black);
+}
+.success-main p {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.success-retour {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid #ffe600;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* VERSION TABLETTE */
+@media screen and (max-width: 1024px) {
+  .header-nav nav .menu {
+    width: 69%;
   }
-  to {
-    transform: rotate(360deg);
+  .pizza-section {
+    width: 45%;
+  }
+  .tablePizza {
+    width: 45%;
+  }
+  .logo-style {
+    max-width: 5%;
+  }
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 720px) {
+  .header-nav nav {
+    flex-direction: column;
+  }
+  .header-nav nav .menu {
+    flex-direction: column;
+    justify-content: center;
+    height: 12rem;
+    padding: 3rem;
+    margin-left: 0.6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .header-nav nav .menu a {
+    display: block;
+  }
+  .header-info p {
+    width: 75%;
+  }
+  .logo-style {
+    flex-direction: column;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    max-width: 20%;
+  }
+  .pizza-section {
+    width: 90%;
+  }
+  .register-main input {
+    width: 50%;
+  }
+  .login-main input {
+    width: 50%;
+  }
+  .profil-main input {
+    width: 50%;
+  }
+  .tablePizza {
+    width: 90%;
+  }
+  .add-main input {
+    width: 50%;
+  }
+  .edit-main input {
+    width: 50%;
   }
 }
