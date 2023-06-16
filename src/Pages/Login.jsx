@@ -1,24 +1,26 @@
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import bcrypt from "bcryptjs-react";
+import { useContext } from "react";
+import UserContext from "../context/UserProvider";
 
 const Login = () => {
-  const [error, setError] = useState(null);
-  const [redirect, setRedirect] = useState(false);
+  const { setLogged } = useContext(UserContext);
   //création des states du formulaire
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const onSubmitForm = () => {
+  async function onSubmitForm() {
     //on récup les valeurs des states du form que l'on met dans un objet
-    let datas = {
-      email: email,
-      password: password,
-    };
-    setRedirect(true);
-  };
-
-  if (redirect) {
-    return <Navigate to="/" />;
+    let user_json = localStorage.getItem("userData");
+    let user = JSON.parse(user_json);
+    let hashPassword = user.password;
+    const proof = bcrypt.compare(password, hashPassword);
+    if (proof && email === user.email) {
+      setLogged(true);
+      navigate("/");
+    }
   }
 
   return (

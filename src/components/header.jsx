@@ -5,8 +5,15 @@ import { useContext } from "react";
 import UserContext from "../context/UserProvider";
 
 const Header = () => {
-  const { logged, userData } = useContext(UserContext);
+  const { logged } = useContext(UserContext);
+
   console.log(logged);
+
+  let user_json = localStorage.getItem("userData");
+
+  let user = JSON.parse(user_json);
+  let firstname = user.firstName;
+  console.log(firstname);
 
   return (
     <div className="header-nav">
@@ -22,7 +29,7 @@ const Header = () => {
           <Link to="/product">Produit</Link>
           {logged ? (
             <div>
-              <Link to="/profil">{userData.firstname}</Link>
+              <Link to="/profil">{user && firstname}</Link>
               <Link to="/logout">Déconnexion</Link>
             </div>
           ) : (

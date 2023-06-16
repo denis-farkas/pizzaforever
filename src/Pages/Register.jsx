@@ -20,20 +20,18 @@ const Register = () => {
   const navigate = useNavigate();
 
   // on envoie le formulaire
-  function onSubmitForm() {
+  async function onSubmitForm() {
     //création du password hash
-    const cryptPass = async (password) => {
-      const salt = await bcrypt.genSalt(10);
-      return await bcrypt.hash(password, salt);
-    };
 
-    const hashPassword = cryptPass(password);
+    // hash the password using bcrypt
+    const saltRounds = 10;
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
 
     let userData = {
       firstName: firstName,
       lastName: lastName,
       email: email,
-      password: hashPassword,
+      password: hashedPassword,
       address: address,
       zip: zip,
       city: city,
@@ -41,7 +39,6 @@ const Register = () => {
     };
 
     registerUser(userData);
-
     navigate("/login");
   }
 

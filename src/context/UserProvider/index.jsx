@@ -1,4 +1,3 @@
-import bcrypt from "bcryptjs-react";
 import { createContext, useState } from "react";
 
 export const UserContext = createContext();
@@ -13,22 +12,9 @@ const UserProvider = ({ children }) => {
     setUserData(userData_json);
   };
 
-  const loginUser = (connectData) => {
-    let user_json = localStorage.getItem("userData");
-    let user = JSON.parse(user_json);
-    setUserData(user);
-    const goodPassword = bcrypt.compare(
-      connectData.password,
-      userData.password
-    );
-    if (goodPassword) {
-      setLogged(true);
-    }
-  };
-
   return (
     <UserContext.Provider
-      value={{ logged, setLogged, setUserData, registerUser, loginUser }}
+      value={{ logged, setLogged, setUserData, registerUser }}
     >
       {children}
     </UserContext.Provider>
