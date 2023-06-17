@@ -345,6 +345,49 @@ img {
   font-weight: 400;
 }
 
+/* register */
+.register-main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--light-black);
+}
+.register-main h1 {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 25px;
+}
+.register-main input {
+  border: 1px solid #ffe600;
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 10px;
+  display: inline-block;
+  width: 25%;
+  margin: 3rem;
+}
+.register-main input::placeholder {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.register-main input:focus-visible {
+  outline: 1px solid #ffe600;
+}
+.register-main input[type="text"] {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.register-main input[type="submit"] {
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 /* Basket */
 .trash-pizza i {
   color: #fac564;
