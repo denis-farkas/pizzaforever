@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs-react";
 import { useContext } from "react";
 import UserContext from "../context/UserProvider";
+import "../App.css";
 
 const Register = () => {
   const { registerUser } = useContext(UserContext);
