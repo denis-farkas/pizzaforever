@@ -108,7 +108,7 @@ img {
 .header-info {
   gap: 1.5rem;
   padding: 2rem;
-  margin-top: -175px;
+  margin-top: -100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,11 +124,16 @@ img {
   font-size: 3rem;
   line-height: 3rem;
   color: var(--white);
+  margin-top: 2rem;
 }
 .header-info p {
   width: 40%;
+  padding-top: 5rem;
   font-size: 1.5rem;
   color: var(--white);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 .header-btn {
   gap: 1.3rem;
@@ -147,6 +152,35 @@ img {
   color: var(--light-black);
   background-color: var(--yellow);
   border: 1px solid transparent;
+}
+
+.logout {
+  width: 80%;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout h1 {
+  color: aliceblue;
+  font-size: 2rem;
+  margin: 3rem auto;
+  font-weight: 900;
+}
+
+.logout-button {
+  border: 1px solid;
+  padding: 2rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  background-color: #bf7e06;
+  width: 50%;
+  margin: 3rem auto;
 }
 
 /* Services */
@@ -351,7 +385,8 @@ img {
 .register-main input:focus-visible {
   outline: 1px solid #ffe600;
 }
-.register-main input[type="text"] {
+.register-main input[type="text"],
+.register-main input[type="email"] {
   color: var(--white);
   font-size: 1rem;
   font-weight: 400;

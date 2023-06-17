@@ -12,16 +12,18 @@ const Logout = () => {
   };
 
   return (
-    <div>
+    <div className="logout">
       <h1>Merci pour votre Visite</h1>
       <button
-        className="logout"
+        className="logout-button"
         type="button"
         onClick={(e) => {
           e.preventDefault();
           disconnect();
         }}
-      ></button>
+      >
+        DECONNEXION
+      </button>
     </div>
   );
 };
