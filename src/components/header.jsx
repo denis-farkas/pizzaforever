@@ -13,7 +13,7 @@ const Header = () => {
 
   let user = JSON.parse(user_json);
   let firstname = user.firstName;
-  console.log(firstname);
+  
 
   return (
     <div className="header-nav">
