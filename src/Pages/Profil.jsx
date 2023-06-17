@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useContext } from "react";
 import UserContext from "../context/UserProvider";
 import { useNavigate } from "react-router-dom";
+import "../App.css";
 
 const Profil = () => {
   const { registerUser } = useContext(UserContext);
