@@ -1,0 +1,22 @@
+@media screen and (max-width: 975px) {
+  .section-buttons {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0.5rem auto;
+    width: 350px;
+  }
+  .btn-group {
+    width: 80px;
+    margin: 0rem auto;
+  }
+  .btn-left {
+    width: 1rem;
+  }
+  .btn-right {
+    width: 1rem;
+  }
+  .add {
+    width: 200px;
+    margin: 0rem auto;
+  }
+}

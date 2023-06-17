@@ -1,27 +1,27 @@
-/*import React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import delivery from "../assets/logo/delivery.png";
 
 const popup = (props) => {
   return (
     <div>
-      {isPopUp && (
+      {props.isPopUp && (
         <div className="popUp">
           <p
             className="closePopUp"
             onClick={(e) => {
-              onClickClose();
+              props.onClickClose();
             }}
           >
             X
           </p>
           <h4>Félicitation</h4>
-          <p>{msg}</p>
-          <img src={delivery} />
+          <p>{props.msg}</p>
+          <img src={delivery} alt="delivery" />
           <button
             id="btn-vers-panier"
             onClick={(e) => {
-              onClickClose();
+              props.onClickClose();
             }}
           >
             <Link to="/basket" id="vers-panier">
@@ -34,4 +34,4 @@ const popup = (props) => {
   );
 };
 
-export default popup;*/
+export default popup;

@@ -1,0 +1,80 @@
+.section-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 1.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+
+.section-buttons img .svg {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  height: auto;
+  width: 2rem;
+}
+
+.btn-group {
+  width: 6rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #f7f8fd;
+  border-radius: 0.7rem;
+}
+
+.btn-group .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  width: 2.7rem;
+  cursor: pointer;
+}
+
+.btn-center {
+  color: black;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 2.7rem;
+}
+
+.add {
+  width: 8rem;
+  height: 2rem;
+  background-color: #ff7d1a;
+  border-radius: 0.7rem;
+  border: none;
+  margin-left: 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  vertical-align: middle;
+  color: white;
+  cursor: pointer;
+}
+
+.add img {
+  display: inline-block;
+}
+
+.cart-btn {
+  margin-right: 1rem;
+  margin-top: rem;
+  width: 1rem;
+}

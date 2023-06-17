@@ -3,16 +3,15 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo/logo.png";
 import { useContext } from "react";
 import UserContext from "../context/UserProvider";
+import ShopDropdown from "./shopDropdown";
+import Cart from "./cart";
 
 const Header = () => {
   const { logged } = useContext(UserContext);
 
-  console.log(logged);
-
   let user_json = localStorage.getItem("userData");
 
   let user = JSON.parse(user_json);
-  
 
   return (
     <div className="header-nav">
@@ -37,7 +36,12 @@ const Header = () => {
               <Link to="/login">Se connecter</Link>
             </div>
           )}
-          <Link to="/basket">Panier</Link>
+          <div className="header-right">
+            <Cart />
+          </div>
+          <div className="shopping" style={{ display: "none" }}>
+            <ShopDropdown />
+          </div>
         </div>
       </nav>
     </div>

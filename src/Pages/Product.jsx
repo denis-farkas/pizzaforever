@@ -1,5 +1,5 @@
 import React from "react";
-import ArticleDetail from "../components/articleDetail.jsx";
+import ArticleDetail from "../components/articleDetail";
 import { useContext } from "react";
 import PizzaContext from "../context/PizzaProvider";
 

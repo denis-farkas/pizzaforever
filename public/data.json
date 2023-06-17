@@ -5,6 +5,7 @@
     "ingredient": "Rotisserie poulet, pâte à pizza, sauce barbecue, fromage cheddar fumé, fromage mozzarella.",
     "price": "12",
     "photo": "images/Pizza-au-Poulet.jpg",
+    "thumbnails": "images/Pizza-au-Poulet-thumbnail.jpg",
     "quantity": "100",
     "creationTimestamp": "2020-06-17 17:28:07"
   },
@@ -14,6 +15,7 @@
     "ingredient": "Pâte à pizza, sauce à pizza, fromage de provolone, mozzarella.",
     "price": "10",
     "photo": "images/Pizza-au-Fromage.jpg",
+    "thumbnails": "images/Pizza-au-Fromage-thumbnail.jpg",
     "quantity": "100",
     "creationTimestamp": "2020-06-17 17:28:07"
   },
@@ -23,6 +25,7 @@
     "ingredient": "Pepperoni, Churizo, Fromage Mozzarella, Sucre.",
     "price": "12",
     "photo": "images/Pepperoni.jpg",
+    "thumbnails": "images/Pepperoni-thumbnail.jpg",
     "quantity": "100",
     "creationTimestamp": "2020-06-17 17:28:07"
   },
@@ -32,6 +35,7 @@
     "ingredient": "Jambon, pepperoni, mozzarella, croûte, oeufs.",
     "price": "12",
     "photo": "images/Pizza-Rustique.jpg",
+    "thumbnails": "images/Pizza-Rustique-thumbnail.jpg",
     "quantity": "100",
     "creationTimestamp": "2020-06-17 17:28:07"
   },
@@ -41,6 +45,7 @@
     "ingredient": "Pâte à pizza, sauce tomate, mozzarella fraîche, huile d'olive, feuilles de basilic.",
     "price": "12",
     "photo": "images/Margherita.jpg",
+    "thumbnails": "images/Margherita-thumbnail.jpg",
     "quantity": "100",
     "creationTimestamp": "2020-06-24 12:49:24"
   },
@@ -50,6 +55,7 @@
     "ingredient": "Pâte à pizza, San Marzano, flocons de poivron rouge, pierre de pizza, huile d'olive.",
     "price": "12",
     "photo": "images/Pizza-à-la-Tomate.jpg",
+    "thumbnails": "images/Pizza-à-la-Tomate-thumbnail.jpg",
     "quantity": "100",
     "creationTimestamp": "2020-06-24 12:49:24"
   }
