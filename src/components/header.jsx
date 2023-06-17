@@ -12,7 +12,6 @@ const Header = () => {
   let user_json = localStorage.getItem("userData");
 
   let user = JSON.parse(user_json);
-  let firstname = user.firstName;
   
 
   return (
@@ -29,7 +28,7 @@ const Header = () => {
           <Link to="/product">Produit</Link>
           {logged ? (
             <div>
-              <Link to="/profil">{user && firstname}</Link>
+              <Link to="/profil">{user && user.firstName}</Link>
               <Link to="/logout">Déconnexion</Link>
             </div>
           ) : (
